@@ -1,11 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.6/.schema/devbox.schema.json",
   "packages": [
-    "neovim@latest"
+    "git@latest",
+    "eza@latest",
+    "zoxide@latest",
+    "neovim@latest",
+    "vscode@latest",
+    "google-cloud-sdk@latest",
+    "kubectl@latest",
   ],
   "env": {
     "GOPATH": "$HOME/go/",
-    "PATH": "$PATH:$HOME/go/bin"
+    "PATH":   "$PATH:$HOME/go/bin",
   },
   "shell": {
     "init_hook": [
@@ -13,8 +19,8 @@
     ],
     "scripts": {
       "test": [
-	"echo \"Error: no test specified\" && exit 1"
+        "echo \"Error: no test specified\" && exit 1",
       ],
-    }
-  }
+    },
+  },
 }
