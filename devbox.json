@@ -5,22 +5,27 @@
     "eza@latest",
     "zoxide@latest",
     "neovim@latest",
-    "vscode@latest",
     "google-cloud-sdk@latest",
     "kubectl@latest",
+    "docker@latest",
+    "zsh@latest",
+    "zplug@latest"
   ],
   "env": {
     "GOPATH": "$HOME/go/",
-    "PATH":   "$PATH:$HOME/go/bin",
+    "PATH":   "$PATH:$HOME/go/bin"
   },
   "shell": {
     "init_hook": [
-      "echo 'Welcome to devbox!' > /dev/null",
+      "export SHELL=/bin/zsh",
+      "/bin/bash -c 'source ~/.zshrc'",
+      "eval \"$(zoxide init bash)\"",
+      "echo 'Welcome to devbox!' > /dev/null"
     ],
     "scripts": {
       "test": [
-        "echo \"Error: no test specified\" && exit 1",
-      ],
-    },
-  },
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
 }
